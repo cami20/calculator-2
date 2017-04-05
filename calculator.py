@@ -26,3 +26,7 @@ while True:
             print add(int(input_string[1]), int(input_string[2]))
         elif input_string[0] == "-":
             print subtract(int(input_string[1]), int(input_string[2]))
+        elif input_string[0] == "*":
+            print multiply(int(input_string[1]), int(input_string[2]))
+        elif input_string[0] == "/":
+            print divide(int(input_string[1]), int(input_string[2]))
