@@ -11,18 +11,18 @@ from arithmetic import *
 # No setup
 # repeat forever:
 while True:
-#     read input
+    #read input
     input = raw_input("> ")
-#     tokenize input
+    # tokenize input
     input_string = input.split(" ")
-#     if the first token is "q":
+    # if the first token is "q":
     if input_string[0] == "q":
-#         quit
+        # quit
         break
-#     else:
+    #else:
     else:
         try:
-    #         decide which math function to call based on first token
+            # decide which math function to call based on first token
             if input_string[0] == "+":
                 print add(int(input_string[1]), int(input_string[2]))
             elif input_string[0] == "-":
