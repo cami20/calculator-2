@@ -21,16 +21,25 @@ while True:
         break
 #     else:
     else:
-#         decide which math function to call based on first token
-        if input_string[0] == "+":
-            print add(int(input_string[1]), int(input_string[2]))
-        elif input_string[0] == "-":
-            print subtract(int(input_string[1]), int(input_string[2]))
-        elif input_string[0] == "*":
-            print multiply(int(input_string[1]), int(input_string[2]))
-        elif input_string[0] == "/":
-            print divide(int(input_string[1]), int(input_string[2]))
-        elif input_string[0] == "square":
-            print square(int(input_string[1]))
-        elif input_string[0] == "cube":
-            print cube(int(input_string[1]))
+        try:
+    #         decide which math function to call based on first token
+            if input_string[0] == "+":
+                print add(int(input_string[1]), int(input_string[2]))
+            elif input_string[0] == "-":
+                print subtract(int(input_string[1]), int(input_string[2]))
+            elif input_string[0] == "*":
+                print multiply(int(input_string[1]), int(input_string[2]))
+            elif input_string[0] == "/":
+                print divide(int(input_string[1]), int(input_string[2]))
+            elif input_string[0] == "square":
+                print square(int(input_string[1]))
+            elif input_string[0] == "cube":
+                print cube(int(input_string[1]))
+            elif input_string[0] == "pow":
+                print power(int(input_string[1]), int(input_string[2]))
+            elif input_string[0] == "mod":
+                print mod(int(input_string[1]), int(input_string[2]))
+            else:
+                print "I do not understand."
+        except ValueError:
+            print "I do not understand"
