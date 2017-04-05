@@ -30,3 +30,7 @@ while True:
             print multiply(int(input_string[1]), int(input_string[2]))
         elif input_string[0] == "/":
             print divide(int(input_string[1]), int(input_string[2]))
+        elif input_string[0] == "square":
+            print square(int(input_string[1]))
+        elif input_string[0] == "cube":
+            print cube(int(input_string[1]))
