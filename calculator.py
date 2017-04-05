@@ -24,4 +24,5 @@ while True:
 #         decide which math function to call based on first token
         if input_string[0] == "+":
             print add(int(input_string[1]), int(input_string[2]))
-
+        elif input_string[0] == "-":
+            print subtract(int(input_string[1]), int(input_string[2]))
