@@ -21,9 +21,16 @@ def subtract(num):
     return total
 
 
-def multiply(num1, num2):
-    """Return the product of two numbers"""
-    return num1 * num2
+# def multiply(num1, num2):
+#     """Return the product of two numbers"""
+#     return num1 * num2
+
+def multiply(num):
+    """Return the product of a list of numbers"""
+    total = 1
+    for number in num:
+        total *= int(number)
+    return total
 
 
 def divide(num1, num2):

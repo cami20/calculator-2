@@ -28,7 +28,7 @@ while True:
             elif input_string[0] == "-":
                     print subtract(input_string[1:])
             elif input_string[0] == "*":
-                print multiply(int(input_string[1]), int(input_string[2]))
+                    print multiply(input_string[1:])
             elif input_string[0] == "/":
                 print divide(int(input_string[1]), int(input_string[2]))
             elif input_string[0] == "square":
