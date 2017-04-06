@@ -24,22 +24,46 @@ while True:
         try:
             # decide which math function to call based on first token
             if input_string[0] == "+":
-                    print add(input_string[1:])
+                    if len(input_string) < 3:
+                        print "I don't understand"
+                    else:
+                        print add(input_string[1:])
             elif input_string[0] == "-":
-                    print subtract(input_string[1:])
+                    if len(input_string) < 3:
+                        print "I don't understand"
+                    else:
+                        print subtract(input_string[1:])
             elif input_string[0] == "*":
-                    print multiply(input_string[1:])
+                    if len(input_string) < 3:
+                        print "I don't understand"
+                    else:
+                        print multiply(input_string[1:])
             elif input_string[0] == "/":
-                print divide(int(input_string[1]), int(input_string[2]))
+                if len(input_string) > 3:
+                    print "Too many inputs :("
+                else:
+                    print divide(int(input_string[1]), int(input_string[2]))
             elif input_string[0] == "square":
-                print square(int(input_string[1]))
+                if len(input_string) > 2:
+                    print "Too many inputs :("
+                else:
+                    print square(int(input_string[1]))
             elif input_string[0] == "cube":
-                print cube(int(input_string[1]))
+                if len(input_string) > 2:
+                    print "Too many inputs"
+                else:
+                    print cube(int(input_string[1]))
             elif input_string[0] == "pow":
-                print power(int(input_string[1]), int(input_string[2]))
+                if len(input_string) > 3:
+                    print "Too many inputs"
+                else:
+                    print power(int(input_string[1]), int(input_string[2]))
             elif input_string[0] == "mod":
-                print mod(int(input_string[1]), int(input_string[2]))
+                if len(input_string) > 3:
+                    print "Too many inputs"
+                else:
+                    print mod(int(input_string[1]), int(input_string[2]))
             else:
                 print "I do not understand."
-        except ValueError:
+        except:
             print "I do not understand"
