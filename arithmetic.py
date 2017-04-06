@@ -1,11 +1,24 @@
-def add(num1, num2):
-    """Return the sum of two numbers"""
-    return num1 + num2
+# def add(num1, num2):
+#     """Return the sum of two numbers"""
+#     return num1 + num2
 
+def add(num):
+    """Return the sum of a list of numbers"""
+    total = 0
+    for number in num:
+        total += int(number)
+    return total
 
-def subtract(num1, num2):
-    """Return the difference of two numbers"""
-    return num1 - num2
+# def subtract(num1, num2):
+#     """Return the difference of two numbers"""
+#     return num1 - num2
+
+def subtract(num):
+    """Return the difference of a list of numbers"""
+    total = int(num[0]) * 2
+    for number in num:
+        total -= int(number)
+    return total
 
 
 def multiply(num1, num2):

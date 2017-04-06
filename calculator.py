@@ -11,7 +11,7 @@ from arithmetic import *
 # No setup
 # repeat forever:
 while True:
-    #read input
+    # read input
     input = raw_input("> ")
     # tokenize input
     input_string = input.split(" ")
@@ -19,14 +19,14 @@ while True:
     if input_string[0] == "q":
         # quit
         break
-    #else:
+    # else:
     else:
         try:
             # decide which math function to call based on first token
             if input_string[0] == "+":
-                print add(int(input_string[1]), int(input_string[2]))
+                    print add(input_string[1:])
             elif input_string[0] == "-":
-                print subtract(int(input_string[1]), int(input_string[2]))
+                    print subtract(input_string[1:])
             elif input_string[0] == "*":
                 print multiply(int(input_string[1]), int(input_string[2]))
             elif input_string[0] == "/":
