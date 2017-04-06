@@ -1,19 +1,19 @@
-# def add(num1, num2):
-#     """Return the sum of two numbers"""
-#     return num1 + num2
+def add(num1, num2):
+    """Return the sum of two numbers"""
+    return num1 + num2
 
-def add(num):
+def add_list(num):
     """Return the sum of a list of numbers"""
     total = 0
     for number in num:
         total += int(number)
     return total
 
-# def subtract(num1, num2):
-#     """Return the difference of two numbers"""
-#     return num1 - num2
+def subtract(num1, num2):
+    """Return the difference of two numbers"""
+    return num1 - num2
 
-def subtract(num):
+def subtract_list(num):
     """Return the difference of a list of numbers"""
     total = int(num[0]) * 2
     for number in num:
@@ -21,11 +21,11 @@ def subtract(num):
     return total
 
 
-# def multiply(num1, num2):
-#     """Return the product of two numbers"""
-#     return num1 * num2
+def multiply(num1, num2):
+    """Return the product of two numbers"""
+    return num1 * num2
 
-def multiply(num):
+def multiply_list(num):
     """Return the product of a list of numbers"""
     total = 1
     for number in num:
@@ -58,15 +58,11 @@ def mod(num1, num2):
     return num1 % num2
 
 
-# def add_mult(num1, num2, num3):
-#     """Return sum of the first two numbers multiplied by third number"""
-#     return (num1 + num2) * num3
-
-# print add_mult(1, 2, 3)    
+def add_mult(num1, num2, num3):
+    """Return sum of the first two numbers multiplied by third number"""
+    return multiply(add(num1, num2), num3)
 
 
-# def add_cubes(num1, num2):
-#     """Return sum of cube of both numbers"""
-#     return (num1 ** 3) + (num2 ** 3)
-
-# print add_cubes(2, 3)
+def add_cubes(num1, num2):
+    """Return sum of cube of both numbers"""
+    return add(cube(num1), cube(num2))

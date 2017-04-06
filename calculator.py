@@ -6,7 +6,6 @@ calculator program yourself in this file.
 
 from arithmetic import *
 
-
 # Your code goes here
 # No setup
 # repeat forever:
@@ -27,17 +26,17 @@ while True:
                     if len(input_string) < 3:
                         print "I don't understand"
                     else:
-                        print add(input_string[1:])
+                        print add_list(input_string[1:])
             elif input_string[0] == "-":
                     if len(input_string) < 3:
                         print "I don't understand"
                     else:
-                        print subtract(input_string[1:])
+                        print subtract_list(input_string[1:])
             elif input_string[0] == "*":
                     if len(input_string) < 3:
                         print "I don't understand"
                     else:
-                        print multiply(input_string[1:])
+                        print multiply_list(input_string[1:])
             elif input_string[0] == "/":
                 if len(input_string) > 3:
                     print "Too many inputs :("
@@ -63,6 +62,16 @@ while True:
                     print "Too many inputs"
                 else:
                     print mod(int(input_string[1]), int(input_string[2]))
+            elif input_string[0] == "x+":
+                if len(input_string) > 4:
+                    print "Too many inputs"
+                else:
+                    print add_mult(int(input_string[1]), int(input_string[2]), int(input_string[3]))
+            elif input_string[0] == "cubes+":
+                if len(input_string) > 3:
+                    print "Too many inputs"
+                else:
+                    print add_cubes(int(input_string[1]), int(input_string[2]))
             else:
                 print "I do not understand."
         except:
